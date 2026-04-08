@@ -4,7 +4,11 @@ import Image from "next/image"
 
 export function CodePortfolio() {
   return (
-    <div className="min-h-screen bg-[#1e1e2e] text-[#cdd6f4] font-mono text-[13px] leading-[1.6] p-4 md:p-6 lg:p-8 selection:bg-[#45475a] selection:text-[#cdd6f4]">
+    <div className="min-h-screen bg-[#0a0a0a] text-[#c9c9c9] font-mono text-[13px] leading-[1.6] p-4 md:p-6 lg:p-8 selection:bg-[#333] selection:text-[#e0e0e0]"
+      style={{
+        background: "linear-gradient(165deg, #0a0a0a 0%, #111115 30%, #0d0d11 60%, #08080c 100%)",
+      }}
+    >
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] lg:grid-cols-[250px_1fr] gap-4 md:gap-6">
           
@@ -13,157 +17,158 @@ export function CodePortfolio() {
             
             {/* Profile Image with <img> tag */}
             <div>
-              <span className="text-[#585b70]">&lt;img&gt;</span>
-              <div className="mt-1 border border-[#45475a] rounded overflow-hidden">
+              <span className="text-[#555]">&lt;img&gt;</span>
+              <div className="mt-1 border border-[#2a2a2e] rounded overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.03)]">
                 <Image
-                  src="/images/profile.jpg"
+                  src="/Logo.png"
                   alt="Ibrahim Khan"
-                  width={250}
-                  height={250}
+                  width={200}
+                  height={200}
                   loading="eager"
                   priority
+                  unoptimized
                   className="w-full h-auto"
                 />
               </div>
-              <span className="text-[#585b70]">&lt;\img&gt;</span>
+              <span className="text-[#555]">&lt;\img&gt;</span>
             </div>
 
-            {/* PLATEFORMES */}
+            {/* PLATFORMS */}
             <div>
               <div>
-                <span className="text-[#cba6f7]">public enum </span>
-                <span className="text-[#f9e2af]">PLATEFORMES</span>
-                <span className="text-[#cdd6f4]">()</span>
+                <span className="text-[#c586c0]">public enum </span>
+                <span className="text-[#dcdcaa]">PLATFORMS</span>
+                <span className="text-[#c9c9c9]">()</span>
               </div>
-              <div className="text-[#585b70]">{'{'}</div>
+              <div className="text-[#555]">{'{'}</div>
               <div className="ml-4 space-y-0.5">
-                <div><span className="text-[#a6e3a1]">Windows,</span></div>
-                <div><span className="text-[#a6e3a1]">Linux,</span></div>
-                <div><span className="text-[#a6e3a1]">Mobile</span></div>
+                <div><span className="text-[#6a9955]">Windows,</span></div>
+                <div><span className="text-[#6a9955]">Linux,</span></div>
+                <div><span className="text-[#6a9955]">Mobile</span></div>
               </div>
-              <div className="text-[#585b70]">{'}'}</div>
+              <div className="text-[#555]">{'}'}</div>
             </div>
 
-            {/* LANGAGES */}
+            {/* LANGUAGES (Programming) */}
             <div>
               <div>
-                <span className="text-[#cba6f7]">public enum </span>
-                <span className="text-[#f9e2af]">LANGAGES</span>
-                <span className="text-[#cdd6f4]">()</span>
+                <span className="text-[#c586c0]">public enum </span>
+                <span className="text-[#dcdcaa]">LANGUAGES</span>
+                <span className="text-[#c9c9c9]">()</span>
               </div>
-              <div className="text-[#585b70]">{'{'}</div>
+              <div className="text-[#555]">{'{'}</div>
               <div className="ml-4 space-y-0.5 text-[12px]">
-                <div><span className="text-[#a6e3a1]">C#,C++,C,</span></div>
-                <div><span className="text-[#a6e3a1]">Python,Bash,LUA,</span></div>
-                <div><span className="text-[#a6e3a1]">Java,HTML5,CSS,</span></div>
-                <div><span className="text-[#a6e3a1]">JavaScript</span></div>
+                <div><span className="text-[#6a9955]">C#,C++,C,</span></div>
+                <div><span className="text-[#6a9955]">Python,Bash,LUA,</span></div>
+                <div><span className="text-[#6a9955]">Java,HTML5,CSS,</span></div>
+                <div><span className="text-[#6a9955]">JavaScript</span></div>
               </div>
-              <div className="text-[#585b70]">{'}'}</div>
+              <div className="text-[#555]">{'}'}</div>
             </div>
 
-            {/* LOGICIELS */}
+            {/* SOFTWARE */}
             <div>
               <div>
-                <span className="text-[#cba6f7]">public enum </span>
-                <span className="text-[#f9e2af]">LOGICIELS</span>
-                <span className="text-[#cdd6f4]">()</span>
+                <span className="text-[#c586c0]">public enum </span>
+                <span className="text-[#dcdcaa]">SOFTWARE</span>
+                <span className="text-[#c9c9c9]">()</span>
               </div>
-              <div className="text-[#585b70]">{'{'}</div>
+              <div className="text-[#555]">{'{'}</div>
               <div className="ml-4 space-y-0.5 text-[12px]">
-                <div><span className="text-[#a6e3a1]">Unity3D,</span></div>
-                <div><span className="text-[#a6e3a1]">UnrealEngine,</span></div>
-                <div><span className="text-[#a6e3a1]">Godot4,VisualStudio,</span></div>
-                <div><span className="text-[#a6e3a1]">Jetbrains,PhotoShop,</span></div>
-                <div><span className="text-[#a6e3a1]">GoogleSuite,Blender,</span></div>
-                <div><span className="text-[#a6e3a1]">AdobePremier,</span></div>
-                <div><span className="text-[#a6e3a1]">AdobeSubstancePainter,</span></div>
-                <div><span className="text-[#a6e3a1]">AdobeSubstance3D</span></div>
+                <div><span className="text-[#6a9955]">Unity3D,</span></div>
+                <div><span className="text-[#6a9955]">UnrealEngine,</span></div>
+                <div><span className="text-[#6a9955]">Godot4,VisualStudio,</span></div>
+                <div><span className="text-[#6a9955]">Jetbrains,PhotoShop,</span></div>
+                <div><span className="text-[#6a9955]">GoogleSuite,Blender,</span></div>
+                <div><span className="text-[#6a9955]">AdobePremiere,</span></div>
+                <div><span className="text-[#6a9955]">AdobeSubstancePainter,</span></div>
+                <div><span className="text-[#6a9955]">AdobeSubstance3D</span></div>
               </div>
-              <div className="text-[#585b70]">{'}'}</div>
+              <div className="text-[#555]">{'}'}</div>
             </div>
 
-            {/* MÉDIA */}
+            {/* MEDIA */}
             <div>
               <div>
-                <span className="text-[#cba6f7]">public enum </span>
-                <span className="text-[#f9e2af]">MÉDIA</span>
-                <span className="text-[#cdd6f4]">()</span>
+                <span className="text-[#c586c0]">public enum </span>
+                <span className="text-[#dcdcaa]">MEDIA</span>
+                <span className="text-[#c9c9c9]">()</span>
               </div>
-              <div className="text-[#585b70]">{'{'}</div>
+              <div className="text-[#555]">{'{'}</div>
               <div className="ml-4 space-y-0.5 text-[12px]">
                 <div>
                   <a href="https://itch.io" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    <span className="text-[#a6e3a1]">itch.io,</span>
+                    <span className="text-[#6a9955]">itch.io,</span>
                   </a>
                 </div>
-                <div className="text-[#6c7086]">//neverdieu.itch.io/</div>
+                <div className="text-[#555]">//neverdieu.itch.io/</div>
                 <div>
                   <a href="https://linkedin.com/in/julian-klimowicz" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    <span className="text-[#a6e3a1]">LinkedIn,</span>
+                    <span className="text-[#6a9955]">LinkedIn,</span>
                   </a>
                 </div>
-                <div className="text-[#6c7086]">//in/julian-klimowicz</div>
+                <div className="text-[#555]">//in/julian-klimowicz</div>
                 <div>
                   <a href="https://github.com/NeverDieu" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    <span className="text-[#a6e3a1]">GitHub</span>
+                    <span className="text-[#6a9955]">GitHub</span>
                   </a>
                 </div>
-                <div className="text-[#6c7086]">//github.com/NeverDieu</div>
+                <div className="text-[#555]">//github.com/NeverDieu</div>
               </div>
-              <div className="text-[#585b70]">{'}'}</div>
+              <div className="text-[#555]">{'}'}</div>
             </div>
 
-            {/* LANGUES */}
+            {/* SPOKEN LANGUAGES */}
             <div>
               <div>
-                <span className="text-[#cba6f7]">public enum </span>
-                <span className="text-[#f9e2af]">LANGUES</span>
-                <span className="text-[#cdd6f4]">()</span>
+                <span className="text-[#c586c0]">public enum </span>
+                <span className="text-[#dcdcaa]">SPOKEN_LANGUAGES</span>
+                <span className="text-[#c9c9c9]">()</span>
               </div>
-              <div className="text-[#585b70]">{'{'}</div>
+              <div className="text-[#555]">{'{'}</div>
               <div className="ml-4 space-y-0.5 text-[12px]">
                 <div>
-                  <span className="text-[#6c7086]">// Native</span>
+                  <span className="text-[#555]">// Native</span>
                 </div>
                 <div>
-                  <span className="text-[#a6e3a1]">FRANÇAIS</span>
-                  <span className="text-[#cdd6f4]"> = C1,</span>
+                  <span className="text-[#6a9955]">FRENCH</span>
+                  <span className="text-[#c9c9c9]"> = C1,</span>
                 </div>
                 <div>
-                  <span className="text-[#6c7086]">// Fluide</span>
+                  <span className="text-[#555]">// Fluent</span>
                 </div>
                 <div>
-                  <span className="text-[#a6e3a1]">ANGLAIS</span>
-                  <span className="text-[#cdd6f4]"> = B2,</span>
+                  <span className="text-[#6a9955]">ENGLISH</span>
+                  <span className="text-[#c9c9c9]"> = B2,</span>
                 </div>
                 <div>
-                  <span className="text-[#6c7086]">// Fluide</span>
+                  <span className="text-[#555]">// Fluent</span>
                 </div>
                 <div>
-                  <span className="text-[#a6e3a1]">POLONAIS</span>
-                  <span className="text-[#cdd6f4]"> = B2,</span>
+                  <span className="text-[#6a9955]">POLISH</span>
+                  <span className="text-[#c9c9c9]"> = B2,</span>
                 </div>
               </div>
-              <div className="text-[#585b70]">{'}'}</div>
+              <div className="text-[#555]">{'}'}</div>
             </div>
 
-            {/* PROFIL */}
+            {/* PROFILE */}
             <div>
               <div>
-                <span className="text-[#cba6f7]">public enum </span>
-                <span className="text-[#f9e2af]">PROFIL</span>
-                <span className="text-[#cdd6f4]">()</span>
+                <span className="text-[#c586c0]">public enum </span>
+                <span className="text-[#dcdcaa]">PROFILE</span>
+                <span className="text-[#c9c9c9]">()</span>
               </div>
-              <div className="text-[#585b70]">{'{'}</div>
+              <div className="text-[#555]">{'{'}</div>
               <div className="ml-4 space-y-0.5 text-[12px]">
-                <div><span className="text-[#a6e3a1]">CURIEUX,</span></div>
-                <div><span className="text-[#a6e3a1]">PONCTUEL,</span></div>
-                <div><span className="text-[#a6e3a1]">RIGOUREUX,</span></div>
-                <div><span className="text-[#a6e3a1]">METICULEUX,</span></div>
-                <div><span className="text-[#a6e3a1]">EMPHATIQUE,</span></div>
-                <div><span className="text-[#a6e3a1]">SOCIAL</span></div>
+                <div><span className="text-[#6a9955]">CURIOUS,</span></div>
+                <div><span className="text-[#6a9955]">PUNCTUAL,</span></div>
+                <div><span className="text-[#6a9955]">RIGOROUS,</span></div>
+                <div><span className="text-[#6a9955]">METICULOUS,</span></div>
+                <div><span className="text-[#6a9955]">EMPATHETIC,</span></div>
+                <div><span className="text-[#6a9955]">SOCIAL</span></div>
               </div>
-              <div className="text-[#585b70]">{'}'}</div>
+              <div className="text-[#555]">{'}'}</div>
             </div>
 
           </div>
@@ -173,306 +178,300 @@ export function CodePortfolio() {
 
             {/* Summary comment block */}
             <div className="space-y-0">
-              <div><span className="text-[#6c7086]">/// &lt;summary&gt;</span></div>
-              <div><span className="text-[#6c7086]">/// Recherche une alternance en programmation C# sur Unity3D</span></div>
-              <div><span className="text-[#6c7086]">/// ou en C++ sur Unreal Engine. Pour une durée de 2 ans.</span></div>
-              <div><span className="text-[#6c7086]">/// 4 jours entreprise, 1 jour école. Disponible IMMÉDIATEMENT.</span></div>
-              <div><span className="text-[#6c7086]">/// &lt;\summary&gt;</span></div>
+              <div><span className="text-[#555]">/// &lt;summary&gt;</span></div>
+              <div><span className="text-[#555]">/// Looking for a work-study position in C# programming on Unity3D</span></div>
+              <div><span className="text-[#555]">/// or in C++ on Unreal Engine. For a duration of 2 years.</span></div>
+              <div><span className="text-[#555]">/// 4 days company, 1 day school. Available IMMEDIATELY.</span></div>
+              <div><span className="text-[#555]">/// &lt;\summary&gt;</span></div>
             </div>
 
             {/* ===== INFORMATION CLASS ===== */}
             <div className="space-y-1">
               <div>
-                <span className="text-[#cba6f7]">public class </span>
-                <span className="text-[#f9e2af] text-lg font-bold">INFORMATION</span>
+                <span className="text-[#c586c0]">public class </span>
+                <span className="text-[#dcdcaa] text-lg font-bold">INFORMATION</span>
               </div>
-              <div className="text-[#585b70]">{'{'}</div>
+              <div className="text-[#555]">{'{'}</div>
               <div className="ml-6 space-y-1">
                 <div>
-                  <span className="text-[#cba6f7]">public string </span>
-                  <span className="text-[#89b4fa]">NOM</span>
-                  <span className="text-[#cdd6f4]"> = </span>
-                  <span className="text-[#a6e3a1]">&quot;KLIMOWICZ Julian&quot;</span>
-                  <span className="text-[#cdd6f4]">;</span>
+                  <span className="text-[#c586c0]">public string </span>
+                  <span className="text-[#9cdcfe]">NAME</span>
+                  <span className="text-[#c9c9c9]"> = </span>
+                  <span className="text-[#ce9178]">&quot;MD IBRAHIM KHAN&quot;</span>
+                  <span className="text-[#c9c9c9]">;</span>
                 </div>
                 <div className="mt-1">
-                  <span className="text-[#cba6f7]">public string </span>
-                  <span className="text-[#89b4fa]">TITRE</span>
-                  <span className="text-[#cdd6f4]"> = </span>
-                  <span className="text-[#a6e3a1]">&quot;Game Programmeur&quot;</span>
-                  <span className="text-[#cdd6f4]">;</span>
+                  <span className="text-[#c586c0]">public string </span>
+                  <span className="text-[#9cdcfe]">TITLE</span>
+                  <span className="text-[#c9c9c9]"> = </span>
+                  <span className="text-[#ce9178]">&quot;FullStack Developer&quot;</span>
+                  <span className="text-[#c9c9c9]">;</span>
                 </div>
                 <div className="mt-1">
-                  <span className="text-[#cba6f7]">public string </span>
-                  <span className="text-[#89b4fa]">EMAIL</span>
-                  <span className="text-[#cdd6f4]"> = </span>
-                  <span className="text-[#a6e3a1]">&quot;klimowicz.stefan77@gmail.com&quot;</span>
-                  <span className="text-[#cdd6f4]">;</span>
+                  <span className="text-[#c586c0]">public string </span>
+                  <span className="text-[#9cdcfe]">EMAIL</span>
+                  <span className="text-[#c9c9c9]"> = </span>
+                  <span className="text-[#ce9178]">&quot;ibrahimdbg369@gmail.com&quot;</span>
+                  <span className="text-[#c9c9c9]">;</span>
                 </div>
                 <div className="mt-1">
-                  <span className="text-[#cba6f7]">public int </span>
-                  <span className="text-[#89b4fa]">TÉLÉPHONE</span>
-                  <span className="text-[#cdd6f4]"> = </span>
-                  <span className="text-[#fab387]">07 83 34 80 10</span>
-                  <span className="text-[#cdd6f4]">;</span>
+                  <span className="text-[#c586c0]">public int </span>
+                  <span className="text-[#9cdcfe]">PHONE</span>
+                  <span className="text-[#c9c9c9]"> = </span>
+                  <span className="text-[#b5cea8]">93263 05970</span>
+                  <span className="text-[#c9c9c9]">;</span>
                 </div>
                 <div className="mt-1">
-                  <span className="text-[#cba6f7]">public string[] </span>
-                  <span className="text-[#89b4fa]">POSITION</span>
-                  <span className="text-[#cdd6f4]"> = </span>
-                  <span className="text-[#cdd6f4]">{'{'}</span>
-                  <span className="text-[#a6e3a1]">&quot;Combs-la-Ville&quot;</span>
-                  <span className="text-[#cdd6f4]">,</span>
-                  <span className="text-[#a6e3a1]">&quot;77380&quot;</span>
-                  <span className="text-[#cdd6f4]">,</span>
+                  <span className="text-[#c586c0]">public string[] </span>
+                  <span className="text-[#9cdcfe]">LOCATION</span>
+                  <span className="text-[#c9c9c9]"> = </span>
+                  <span className="text-[#c9c9c9]">{'{'}</span>
+                  <span className="text-[#ce9178]">&quot;New Delhi&quot;</span>
+                  <span className="text-[#c9c9c9]">,</span>
+                  <span className="text-[#ce9178]">&quot;110086&quot;</span>
+                  <span className="text-[#c9c9c9]">,</span>
                 </div>
                 <div className="ml-12">
-                  <span className="text-[#a6e3a1]">&quot;Seine-et-Marne&quot;</span>
-                  <span className="text-[#cdd6f4]">,</span>
-                  <span className="text-[#a6e3a1]">&quot;Île-de-France&quot;</span>
-                  <span className="text-[#cdd6f4]">{'}'}</span>
-                  <span className="text-[#cdd6f4]">;</span>
+                  <span className="text-[#ce9178]">&quot;Seine-et-Marne&quot;</span>
+                  <span className="text-[#c9c9c9]">,</span>
+                  <span className="text-[#ce9178]">&quot;Île-de-France&quot;</span>
+                  <span className="text-[#c9c9c9]">{'}'}</span>
+                  <span className="text-[#c9c9c9]">;</span>
                 </div>
+                
                 <div className="mt-1">
-                  <span className="text-[#cba6f7]">public bool </span>
-                  <span className="text-[#89b4fa]">PERMIS_B_VÉHICULÉ</span>
-                  <span className="text-[#cdd6f4]"> = </span>
-                  <span className="text-[#cba6f7]">true</span>
-                  <span className="text-[#cdd6f4]">;</span>
-                </div>
-                <div className="mt-1">
-                  <span className="text-[#cba6f7]">public int </span>
-                  <span className="text-[#89b4fa]">ÂGE</span>
-                  <span className="text-[#cdd6f4]"> = </span>
-                  <span className="text-[#fab387]">21</span>
-                  <span className="text-[#cdd6f4]">;</span>
+                  <span className="text-[#c586c0]">public int </span>
+                  <span className="text-[#9cdcfe]">AGE</span>
+                  <span className="text-[#c9c9c9]"> = </span>
+                  <span className="text-[#b5cea8]">21</span>
+                  <span className="text-[#c9c9c9]">;</span>
                 </div>
               </div>
-              <div className="text-[#585b70]">{'}'}</div>
+              <div className="text-[#555]">{'}'}</div>
             </div>
 
-            {/* ===== FORMATIONS CLASS ===== */}
+            {/* ===== EDUCATION CLASS ===== */}
             <div className="space-y-1">
               <div>
-                <span className="text-[#cba6f7]">public partial class </span>
-                <span className="text-[#f9e2af] text-lg font-bold">FORMATIONS</span>
-                <span className="text-[#cdd6f4]"> : </span>
-                <span className="text-[#89dceb] text-lg font-bold underline">ÉcolesSupérieures</span>
+                <span className="text-[#c586c0]">public partial class </span>
+                <span className="text-[#dcdcaa] text-lg font-bold">EDUCATION</span>
+                <span className="text-[#c9c9c9]"> : </span>
+                <span className="text-[#4ec9b0] text-lg font-bold underline">Btech</span>
               </div>
-              <div className="text-[#585b70]">{'{'}</div>
+              <div className="text-[#555]">{'{'}</div>
               <div className="ml-6 space-y-3">
                 
                 {/* YnovConnect */}
                 <div className="space-y-0.5">
                   <div>
-                    <span className="text-[#cba6f7]">private void </span>
-                    <span className="text-[#f9e2af]">YnovConnect</span>
-                    <span className="text-[#cdd6f4]">()</span>
+                    <span className="text-[#c586c0]">private void </span>
+                    <span className="text-[#dcdcaa]">YnovConnect</span>
+                    <span className="text-[#c9c9c9]">()</span>
                   </div>
-                  <div className="text-[#585b70]">{'{'}</div>
+                  <div className="text-[#555]">{'{'}</div>
                   <div className="ml-6 space-y-0.5">
                     <div>
-                      <span className="text-[#cba6f7]">var </span>
-                      <span className="text-[#cdd6f4]">_Niveau</span>
-                      <span className="text-[#cdd6f4]"> = </span>
-                      <span className="text-[#89dceb]">Mastère</span>
-                      <span className="text-[#cdd6f4]">;</span>
-                      <span className="text-[#6c7086]"> // Pour une durée de 2 ans</span>
+                      <span className="text-[#c586c0]">var </span>
+                      <span className="text-[#c9c9c9]">_Level</span>
+                      <span className="text-[#c9c9c9]"> = </span>
+                      <span className="text-[#4ec9b0]">Masters</span>
+                      <span className="text-[#c9c9c9]">;</span>
+                      <span className="text-[#555]"> // For a duration of 2 years</span>
                     </div>
                     <div>
-                      <span className="text-[#cba6f7]">var </span>
-                      <span className="text-[#cdd6f4]">_Date</span>
-                      <span className="text-[#cdd6f4]"> = </span>
-                      <span className="text-[#89dceb]">Aujourd&apos;hui</span>
-                      <span className="text-[#cdd6f4]">;</span>
+                      <span className="text-[#c586c0]">var </span>
+                      <span className="text-[#c9c9c9]">_Date</span>
+                      <span className="text-[#c9c9c9]"> = </span>
+                      <span className="text-[#4ec9b0]">Present</span>
+                      <span className="text-[#c9c9c9]">;</span>
                     </div>
                     <div>
-                      <span className="text-[#cba6f7]">var </span>
-                      <span className="text-[#cdd6f4]">_Type</span>
-                      <span className="text-[#cdd6f4]"> = </span>
-                      <span className="text-[#89dceb]">Game</span>
-                      <span className="text-[#cdd6f4]">.</span>
-                      <span className="text-[#f9e2af]">Programmer</span>
-                      <span className="text-[#cdd6f4]">();</span>
+                      <span className="text-[#c586c0]">var </span>
+                      <span className="text-[#c9c9c9]">_Type</span>
+                      <span className="text-[#c9c9c9]"> = </span>
+                      <span className="text-[#4ec9b0]">FullStack</span>
+                      <span className="text-[#c9c9c9]">.</span>
+                      <span className="text-[#dcdcaa]">Developer</span>
+                      <span className="text-[#c9c9c9]">();</span>
                     </div>
                   </div>
-                  <div className="text-[#585b70]">{'}'}</div>
+                  <div className="text-[#555]">{'}'}</div>
                 </div>
 
                 {/* ICAN */}
                 <div className="space-y-0.5">
                   <div>
-                    <span className="text-[#cba6f7]">private void </span>
-                    <span className="text-[#f9e2af]">ICAN</span>
-                    <span className="text-[#cdd6f4]">(</span>
-                    <span className="text-[#89b4fa]">string[]</span>
-                    <span className="text-[#cdd6f4]"> _Diplômes)</span>
+                    <span className="text-[#c586c0]">private void </span>
+                    <span className="text-[#dcdcaa]">ICAN</span>
+                    <span className="text-[#c9c9c9]">(</span>
+                    <span className="text-[#569cd6]">string[]</span>
+                    <span className="text-[#c9c9c9]"> _Degrees)</span>
                   </div>
-                  <div className="text-[#585b70]">{'{'}</div>
+                  <div className="text-[#555]">{'{'}</div>
                   <div className="ml-6 space-y-0.5">
                     <div>
-                      <span className="text-[#cba6f7]">var </span>
-                      <span className="text-[#cdd6f4]">_Niveau</span>
-                      <span className="text-[#cdd6f4]"> = </span>
-                      <span className="text-[#89dceb]">Bachelor</span>
-                      <span className="text-[#cdd6f4]">;</span>
+                      <span className="text-[#c586c0]">var </span>
+                      <span className="text-[#c9c9c9]">_Level</span>
+                      <span className="text-[#c9c9c9]"> = </span>
+                      <span className="text-[#4ec9b0]">Bachelor</span>
+                      <span className="text-[#c9c9c9]">;</span>
                     </div>
                     <div>
-                      <span className="text-[#cba6f7]">var </span>
-                      <span className="text-[#cdd6f4]">_Date</span>
-                      <span className="text-[#cdd6f4]"> = </span>
-                      <span className="text-[#89dceb]">Range</span>
-                      <span className="text-[#cdd6f4]">(début: </span>
-                      <span className="text-[#a6e3a1]">Octobre 2021</span>
-                      <span className="text-[#cdd6f4]">, fin: </span>
-                      <span className="text-[#a6e3a1]">Juin 2024</span>
-                      <span className="text-[#cdd6f4]">);</span>
+                      <span className="text-[#c586c0]">var </span>
+                      <span className="text-[#c9c9c9]">_Date</span>
+                      <span className="text-[#c9c9c9]"> = </span>
+                      <span className="text-[#4ec9b0]">Range</span>
+                      <span className="text-[#c9c9c9]">(start: </span>
+                      <span className="text-[#ce9178]">October 2021</span>
+                      <span className="text-[#c9c9c9]">, end: </span>
+                      <span className="text-[#ce9178]">June 2024</span>
+                      <span className="text-[#c9c9c9]">);</span>
                     </div>
                     <div>
-                      <span className="text-[#cba6f7]">var </span>
-                      <span className="text-[#cdd6f4]">_Type</span>
-                      <span className="text-[#cdd6f4]"> = </span>
-                      <span className="text-[#89dceb]">Game</span>
-                      <span className="text-[#cdd6f4]">.</span>
-                      <span className="text-[#f9e2af]">Design</span>
-                      <span className="text-[#cdd6f4]">();</span>
+                      <span className="text-[#c586c0]">var </span>
+                      <span className="text-[#c9c9c9]">_Type</span>
+                      <span className="text-[#c9c9c9]"> = </span>
+                      <span className="text-[#4ec9b0]">Game</span>
+                      <span className="text-[#c9c9c9]">.</span>
+                      <span className="text-[#dcdcaa]">Design</span>
+                      <span className="text-[#c9c9c9]">();</span>
                     </div>
                     <div>
-                      <span className="text-[#cdd6f4]">_Diplômes = {'{'}</span>
-                      <span className="text-[#a6e3a1]">&quot;Game Design&quot;</span>
-                      <span className="text-[#cdd6f4]">,</span>
-                      <span className="text-[#a6e3a1]">&quot;Designer Numérique&quot;</span>
-                      <span className="text-[#cdd6f4]">{'}'}</span>
-                      <span className="text-[#cdd6f4]">;</span>
+                      <span className="text-[#c9c9c9]">_Degrees = {'{'}</span>
+                      <span className="text-[#ce9178]">&quot;Game Design&quot;</span>
+                      <span className="text-[#c9c9c9]">,</span>
+                      <span className="text-[#ce9178]">&quot;Digital Designer&quot;</span>
+                      <span className="text-[#c9c9c9]">{'}'}</span>
+                      <span className="text-[#c9c9c9]">;</span>
                     </div>
                     <div>
-                      <span className="text-[#cba6f7]">var </span>
-                      <span className="text-[#cdd6f4]">_Obtention</span>
-                      <span className="text-[#cdd6f4]"> =</span>
-                      <span className="text-[#a6e3a1]">&quot;Samedi 24 Juin 2025&quot;</span>
-                      <span className="text-[#cdd6f4]">;</span>
+                      <span className="text-[#c586c0]">var </span>
+                      <span className="text-[#c9c9c9]">_Graduation</span>
+                      <span className="text-[#c9c9c9]"> = </span>
+                      <span className="text-[#ce9178]">&quot;Saturday June 24, 2025&quot;</span>
+                      <span className="text-[#c9c9c9]">;</span>
                     </div>
                   </div>
-                  <div className="text-[#585b70]">{'}'}</div>
+                  <div className="text-[#555]">{'}'}</div>
                 </div>
 
               </div>
-              <div className="text-[#585b70]">{'}'}</div>
+              <div className="text-[#555]">{'}'}</div>
             </div>
 
-            {/* ===== EXPÉRIENCES CLASS ===== */}
+            {/* ===== EXPERIENCE CLASS ===== */}
             <div className="space-y-1">
               <div>
-                <span className="text-[#cba6f7]">public static class </span>
-                <span className="text-[#f9e2af] text-lg font-bold">EXPÉRIENCES</span>
+                <span className="text-[#c586c0]">public static class </span>
+                <span className="text-[#dcdcaa] text-lg font-bold">EXPERIENCE</span>
               </div>
-              <div className="text-[#585b70]">{'{'}</div>
+              <div className="text-[#555]">{'{'}</div>
               <div className="ml-6 space-y-3">
 
                 {/* StudioPREMA */}
                 <div className="space-y-0.5">
                   <div>
-                    <span className="text-[#cba6f7]">public void </span>
-                    <span className="text-[#f9e2af]">StudioPREMA</span>
-                    <span className="text-[#cdd6f4]">()</span>
+                    <span className="text-[#c586c0]">public void </span>
+                    <span className="text-[#dcdcaa]">StudioPREMA</span>
+                    <span className="text-[#c9c9c9]">()</span>
                   </div>
-                  <div className="text-[#585b70]">{'{'}</div>
+                  <div className="text-[#555]">{'{'}</div>
                   <div className="ml-6 space-y-0.5">
                     <div>
-                      <span className="text-[#cba6f7]">var </span>
-                      <span className="text-[#cdd6f4]">_Durée</span>
-                      <span className="text-[#cdd6f4]"> = </span>
-                      <span className="text-[#89dceb]">Range</span>
-                      <span className="text-[#cdd6f4]">(début: </span>
-                      <span className="text-[#a6e3a1]">Septembre 2024</span>
-                      <span className="text-[#cdd6f4]">, fin: </span>
-                      <span className="text-[#a6e3a1]">Novembre 2024</span>
-                      <span className="text-[#cdd6f4]">);</span>
+                      <span className="text-[#c586c0]">var </span>
+                      <span className="text-[#c9c9c9]">_Duration</span>
+                      <span className="text-[#c9c9c9]"> = </span>
+                      <span className="text-[#4ec9b0]">Range</span>
+                      <span className="text-[#c9c9c9]">(start: </span>
+                      <span className="text-[#ce9178]">September 2024</span>
+                      <span className="text-[#c9c9c9]">, end: </span>
+                      <span className="text-[#ce9178]">November 2024</span>
+                      <span className="text-[#c9c9c9]">);</span>
                     </div>
                     <div>
-                      <span className="text-[#cba6f7]">var </span>
-                      <span className="text-[#cdd6f4]">_Lien</span>
-                      <span className="text-[#cdd6f4]"> = </span>
-                      <span className="text-[#a6e3a1]">&quot;https://afjv.com/societe/1330-studio-prema.htm&quot;</span>
-                      <span className="text-[#cdd6f4]">;</span>
+                      <span className="text-[#c586c0]">var </span>
+                      <span className="text-[#c9c9c9]">_Link</span>
+                      <span className="text-[#c9c9c9]"> = </span>
+                      <span className="text-[#ce9178]">&quot;https://afjv.com/societe/1330-studio-prema.htm&quot;</span>
+                      <span className="text-[#c9c9c9]">;</span>
                     </div>
                     <div>
-                      <span className="text-[#cba6f7]">var </span>
-                      <span className="text-[#cdd6f4]">_Type</span>
-                      <span className="text-[#cdd6f4]"> = </span>
-                      <span className="text-[#cba6f7]">new </span>
-                      <span className="text-[#89dceb]">Stage</span>
-                      <span className="text-[#cdd6f4]">;</span>
+                      <span className="text-[#c586c0]">var </span>
+                      <span className="text-[#c9c9c9]">_Type</span>
+                      <span className="text-[#c9c9c9]"> = </span>
+                      <span className="text-[#c586c0]">new </span>
+                      <span className="text-[#4ec9b0]">Internship</span>
+                      <span className="text-[#c9c9c9]">;</span>
                     </div>
                     <div className="mt-2">
-                      <span className="text-[#6c7086]">/*StudioPREMA est une petite studio de jeux vidéos PC fondé par</span>
+                      <span className="text-[#555]">/*StudioPREMA is a small PC video game studio founded by</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">Arthur DEFOIN qui ont pour projet Eplitz, un moba compétitif inspiré de</span>
+                      <span className="text-[#555]">Arthur DEFOIN, working on Eplitz — a competitive MOBA inspired by</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">League of Legends et Dota. Fait sous Unity 6 Durant ce Stage j&apos;étais</span>
+                      <span className="text-[#555]">League of Legends and Dota. Built with Unity 6. During this internship</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">dans une équipe de développeur, mes missions étaient de créer les</span>
+                      <span className="text-[#555]">I was part of a development team. My tasks included creating</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">compétences des personnages et d&apos;importer les différents assets 3D,</span>
+                      <span className="text-[#555]">character abilities and importing various 3D assets,</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">animations et VFX en collaboration avec les Game Artistes.*/</span>
+                      <span className="text-[#555]">animations and VFX in collaboration with the Game Artists.*/</span>
                     </div>
                   </div>
-                  <div className="text-[#585b70]">{'}'}</div>
+                  <div className="text-[#555]">{'}'}</div>
                 </div>
 
                 {/* LeDouzisme */}
                 <div className="space-y-0.5">
                   <div>
-                    <span className="text-[#cba6f7]">public void </span>
-                    <span className="text-[#f9e2af]">LeDouzisme</span>
-                    <span className="text-[#cdd6f4]">()</span>
+                    <span className="text-[#c586c0]">public void </span>
+                    <span className="text-[#dcdcaa]">LeDouzisme</span>
+                    <span className="text-[#c9c9c9]">()</span>
                   </div>
-                  <div className="text-[#585b70]">{'{'}</div>
+                  <div className="text-[#555]">{'{'}</div>
                   <div className="ml-6 space-y-0.5">
                     <div>
-                      <span className="text-[#cba6f7]">var </span>
-                      <span className="text-[#cdd6f4]">_Type</span>
-                      <span className="text-[#cdd6f4]"> = </span>
-                      <span className="text-[#cba6f7]">new </span>
-                      <span className="text-[#89dceb]">Association</span>
-                      <span className="text-[#cdd6f4]">;</span>
+                      <span className="text-[#c586c0]">var </span>
+                      <span className="text-[#c9c9c9]">_Type</span>
+                      <span className="text-[#c9c9c9]"> = </span>
+                      <span className="text-[#c586c0]">new </span>
+                      <span className="text-[#4ec9b0]">Association</span>
+                      <span className="text-[#c9c9c9]">;</span>
                     </div>
                     <div className="mt-2">
-                      <span className="text-[#6c7086]">/*Le Douzisme est une association que j&apos;ai fondé avec des amis dans</span>
+                      <span className="text-[#555]">/*Le Douzisme is an association I co-founded with friends,</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">laquelle on a comme projet de créer des jeux vidéos PC de plusieurs</span>
+                      <span className="text-[#555]">with the goal of creating PC video games across multiple</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">genres et qui nous font plaisir. Notre premier projet est un survivor qui</span>
+                      <span className="text-[#555]">genres — games we genuinely enjoy making. Our first project is a</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">servira de démo technique pour un projet plus ambitieux de &quot;rogue lite-</span>
+                      <span className="text-[#555]">survivor game serving as a technical demo for a more ambitious</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">elite rpg&quot; avec de la coop. On est une toute petite équipe de 3 personnes</span>
+                      <span className="text-[#555]">&quot;rogue lite-elite RPG&quot; with co-op. We are a small team of 3 people</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">et nous travaillons sur notre projet quand on trouve du temps pour</span>
+                      <span className="text-[#555]">working on this project whenever we find the time, with the</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">ambition de transformer notre association en entreprise/studio et le</span>
+                      <span className="text-[#555]">ambition to turn our association into a company/studio once the</span>
                     </div>
                     <div>
-                      <span className="text-[#6c7086]">survivor est un succès. Nous travaillons sur le moteur de jeu Unity.*/</span>
+                      <span className="text-[#555]">survivor is a success. We develop on the Unity game engine.*/</span>
                     </div>
                   </div>
-                  <div className="text-[#585b70]">{'}'}</div>
+                  <div className="text-[#555]">{'}'}</div>
                 </div>
 
               </div>
-              <div className="text-[#585b70]">{'}'}</div>
+              <div className="text-[#555]">{'}'}</div>
             </div>
 
           </div>
