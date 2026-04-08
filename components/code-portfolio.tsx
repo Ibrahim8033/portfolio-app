@@ -132,7 +132,7 @@ export function CodePortfolio() {
                 <span className="text-slate-500">/// &lt;summary&gt;</span>
               </div>
               <div>
-                <span className="text-slate-500">/// Information personnelle détaillée</span>
+                <span className="text-slate-500">/// Detailed personal information</span>
               </div>
               <div>
                 <span className="text-slate-500">/// &lt;/summary&gt;</span>
@@ -144,14 +144,14 @@ export function CodePortfolio() {
 
               <div className="ml-4 space-y-2">
                 <div>
-                  <span className="text-cyan-400">public string</span> <span className="text-yellow-300">NOM</span>
+                  <span className="text-cyan-400">public string</span> <span className="text-yellow-300">NAME</span>
                   <span className="text-slate-400"> = </span>
                   <span className="text-green-400">"Ibrahim Khan"</span>
                   <span className="text-slate-400">;</span>
                 </div>
 
                 <div>
-                  <span className="text-cyan-400">public string</span> <span className="text-yellow-300">TITRE</span>
+                  <span className="text-cyan-400">public string</span> <span className="text-yellow-300">TITLE</span>
                   <span className="text-slate-400"> = </span>
                   <span className="text-green-400">"Full-Stack Developer & AI Enthusiast"</span>
                   <span className="text-slate-400">;</span>
@@ -165,7 +165,7 @@ export function CodePortfolio() {
                 </div>
 
                 <div>
-                  <span className="text-cyan-400">public string</span> <span className="text-yellow-300">TÉLÉPHONE</span>
+                  <span className="text-cyan-400">public string</span> <span className="text-yellow-300">PHONE</span>
                   <span className="text-slate-400"> = </span>
                   <span className="text-green-400">"+92 300 1234567"</span>
                   <span className="text-slate-400">;</span>
@@ -179,14 +179,14 @@ export function CodePortfolio() {
                 </div>
 
                 <div>
-                  <span className="text-cyan-400">public int</span> <span className="text-yellow-300">ÂGE</span>
+                  <span className="text-cyan-400">public int</span> <span className="text-yellow-300">AGE</span>
                   <span className="text-slate-400"> = </span>
                   <span className="text-green-400">21</span>
                   <span className="text-slate-400">;</span>
                 </div>
 
                 <div>
-                  <span className="text-cyan-400">public string</span> <span className="text-yellow-300">LOCALISATION</span>
+                  <span className="text-cyan-400">public string</span> <span className="text-yellow-300">LOCATION</span>
                   <span className="text-slate-400"> = </span>
                   <span className="text-green-400">"Pakistan"</span>
                   <span className="text-slate-400">;</span>
@@ -202,7 +202,7 @@ export function CodePortfolio() {
                 <span className="text-slate-500">/// &lt;summary&gt;</span>
               </div>
               <div>
-                <span className="text-slate-500">/// Formation académique</span>
+                <span className="text-slate-500">/// Academic education</span>
               </div>
               <div>
                 <span className="text-slate-500">/// &lt;/summary&gt;</span>
@@ -210,7 +210,7 @@ export function CodePortfolio() {
               <div className="mt-2">
                 <span className="text-cyan-400">public partial class</span> <span className="text-yellow-300">FORMATIONS</span>
                 <span className="text-slate-400"> : </span>
-                <span className="text-cyan-400">ÉtudesSup</span>
+                <span className="text-cyan-400">HigherEducation</span>
               </div>
               <div className="text-slate-400">{'{'}</div>
 
@@ -222,7 +222,7 @@ export function CodePortfolio() {
                 <div className="text-slate-400">{'{'}</div>
                 <div className="ml-4 space-y-1">
                   <div>
-                    <span className="text-cyan-400">var</span> <span className="text-slate-300">_Université</span>
+                    <span className="text-cyan-400">var</span> <span className="text-slate-300">_University</span>
                     <span className="text-slate-400"> = </span>
                     <span className="text-cyan-400">FAST</span>
                     <span className="text-slate-400">;</span>
@@ -232,17 +232,17 @@ export function CodePortfolio() {
                     <span className="text-slate-400"> = </span>
                     <span className="text-cyan-400">Range</span>
                     <span className="text-slate-400">(</span>
-                    <span className="text-green-400">début</span>
+                    <span className="text-green-400">start</span>
                     <span className="text-slate-400">: </span>
                     <span className="text-cyan-400">2022</span>
                     <span className="text-slate-400">, </span>
-                    <span className="text-green-400">fin</span>
+                    <span className="text-green-400">end</span>
                     <span className="text-slate-400">: </span>
                     <span className="text-cyan-400">2026</span>
                     <span className="text-slate-400">);</span>
                   </div>
                   <div>
-                    <span className="text-cyan-400">var</span> <span className="text-slate-300">_Programme</span>
+                    <span className="text-cyan-400">var</span> <span className="text-slate-300">_Program</span>
                     <span className="text-slate-400"> = </span>
                     <span className="text-green-400">"Computer Science"</span>
                     <span className="text-slate-400">;</span>
@@ -260,13 +260,13 @@ export function CodePortfolio() {
                 <span className="text-slate-500">/// &lt;summary&gt;</span>
               </div>
               <div>
-                <span className="text-slate-500">/// Expérience professionnelle et projets</span>
+                <span className="text-slate-500">/// Professional experience and projects</span>
               </div>
               <div>
                 <span className="text-slate-500">/// &lt;/summary&gt;</span>
               </div>
               <div className="mt-2">
-                <span className="text-cyan-400">public static class</span> <span className="text-yellow-300">EXPÉRIENCES</span>
+                <span className="text-cyan-400">public static class</span> <span className="text-yellow-300">EXPERIENCES</span>
               </div>
               <div className="text-slate-400">{'{'}</div>
 
