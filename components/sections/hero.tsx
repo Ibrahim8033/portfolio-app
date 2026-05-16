@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
@@ -23,7 +23,7 @@ export function HeroSection() {
             transition={{ delay: 0.2 }}
             className="text-primary font-mono text-sm md:text-base"
           >
-            Hi, my name is
+            Hi, I&apos;m
           </motion.p>
 
           <motion.h1
@@ -41,7 +41,7 @@ export function HeroSection() {
             transition={{ delay: 0.4 }}
             className="text-3xl md:text-5xl lg:text-6xl font-bold text-muted-foreground text-balance"
           >
-            I build things for the web & beyond.
+            Full-Stack Developer & AI Engineer.
           </motion.h2>
 
           <motion.p
@@ -50,9 +50,9 @@ export function HeroSection() {
             transition={{ delay: 0.5 }}
             className="max-w-xl text-muted-foreground text-base md:text-lg leading-relaxed"
           >
-            {"I'm"} a Computer Science student and AI enthusiast specializing in building 
-            exceptional digital experiences. Currently focused on creating accessible, 
-            human-centered products that leverage the power of artificial intelligence.
+            I build production-grade AI-powered applications with real-time streaming,
+            LLM integrations, and scalable architectures. B.Tech CST student at{" "}
+            <span className="text-primary">MAIT Delhi</span>, Oracle Certified in Generative AI.
           </motion.p>
 
           <motion.div
@@ -66,7 +66,7 @@ export function HeroSection() {
               className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base"
             >
               <a href="#projects">
-                View Projects
+                View My Work
               </a>
             </Button>
             <Button
@@ -74,8 +74,9 @@ export function HeroSection() {
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10 px-8 py-6 text-base"
             >
-              <a href="#contact">
-                Contact Me
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <FileText className="h-4 w-4 mr-2" />
+                Download Resume
               </a>
             </Button>
           </motion.div>
@@ -88,9 +89,9 @@ export function HeroSection() {
             className="flex gap-6 pt-8"
           >
             {[
-              { icon: Github, href: "https://github.com", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:ibrahim@example.com", label: "Email" },
+              { icon: Github, href: "https://github.com/Ibrahim8033", label: "GitHub" },
+              { icon: Linkedin, href: "https://linkedin.com/in/mdibrahimkhan", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:ibrahimdbg369@gmail.com", label: "Email" },
             ].map((social) => (
               <motion.a
                 key={social.label}

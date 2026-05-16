@@ -4,24 +4,39 @@ import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: '--font-inter',
   display: 'swap',
 });
 
-const firaCode = Fira_Code({ 
+const firaCode = Fira_Code({
   subsets: ["latin"],
   variable: '--font-fira-code',
   display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: 'Ibrahim Khan | AI & Full-Stack Developer',
-  description: 'Personal portfolio of Ibrahim Khan - Computer Science student passionate about AI, Machine Learning, and Full-Stack Development. Building innovative solutions that make a difference.',
-  keywords: ['developer', 'portfolio', 'AI', 'machine learning', 'full-stack', 'web development', 'computer science'],
-  authors: [{ name: 'Ibrahim Khan' }],
-  creator: 'Ibrahim Khan',
+  title: 'Ibrahim Khan | Full-Stack Developer & AI Engineer',
+  description: 'Portfolio of MD Ibrahim Khan — Full-Stack Developer & AI Engineer. B.Tech CST at MAIT Delhi. Building production-grade AI-powered applications with real-time streaming, LLM integrations, and scalable architectures. Oracle Certified Generative AI Professional.',
+  keywords: ['Ibrahim Khan', 'full-stack developer', 'AI engineer', 'portfolio', 'Next.js', 'React', 'LLM', 'generative AI', 'web development', 'MAIT Delhi', 'software engineer'],
+  authors: [{ name: 'MD Ibrahim Khan' }],
+  creator: 'MD Ibrahim Khan',
+  openGraph: {
+    title: 'Ibrahim Khan | Full-Stack Developer & AI Engineer',
+    description: 'Building production-grade AI-powered applications with real-time streaming, LLM integrations, and scalable architectures.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ibrahim Khan | Full-Stack Developer & AI Engineer',
+    description: 'Building production-grade AI-powered applications with real-time streaming, LLM integrations, and scalable architectures.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: [
       {
@@ -57,7 +72,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${firaCode.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${firaCode.variable} font-sans antialiased`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -3,17 +3,17 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef, useState } from "react"
-import { Send, Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Send, Github, Linkedin, Mail, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Field, FieldLabel, FieldGroup } from "@/components/ui/field"
 
 const socialLinks = [
-  { name: "GitHub", icon: Github, href: "https://github.com" },
-  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com" },
-  { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
-  { name: "Email", icon: Mail, href: "mailto:alex@example.com" },
+  { name: "GitHub", icon: Github, href: "https://github.com/Ibrahim8033" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/in/mdibrahimkhan" },
+  { name: "Email", icon: Mail, href: "mailto:ibrahimdbg369@gmail.com" },
+  { name: "Phone", icon: Phone, href: "tel:+916307260880" },
 ]
 
 export function ContactSection() {
@@ -42,15 +42,34 @@ export function ContactSection() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <p className="text-primary font-mono text-sm mb-4">05. {"What's"} Next?</p>
+          <p className="text-primary font-mono text-sm mb-4">06. What&apos;s Next?</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Get In Touch
+            Let&apos;s Build Something Together
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto mb-12 leading-relaxed">
-            {"I'm"} currently looking for new opportunities and my inbox is always open. 
-            Whether you have a question, want to collaborate, or just want to say hi, 
-            {"I'll"} do my best to get back to you!
+            I&apos;m actively seeking software engineering internships and full-time
+            opportunities. If you&apos;re looking for a developer who ships production-grade
+            AI-powered applications, let&apos;s connect.
           </p>
+
+          {/* Direct CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.15 }}
+            className="mb-12"
+          >
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-7 text-lg"
+            >
+              <a href="mailto:ibrahimdbg369@gmail.com">
+                <Mail className="h-5 w-5 mr-2" />
+                Say Hello
+              </a>
+            </Button>
+          </motion.div>
 
           {/* Contact Form */}
           <motion.div
@@ -72,7 +91,7 @@ export function ContactSection() {
                   Message Sent!
                 </h3>
                 <p className="text-muted-foreground">
-                  Thanks for reaching out. {"I'll"} get back to you soon!
+                  Thanks for reaching out. I&apos;ll get back to you soon!
                 </p>
               </motion.div>
             ) : (
@@ -84,7 +103,7 @@ export function ContactSection() {
                       <Input
                         id="name"
                         name="name"
-                        placeholder="John Doe"
+                        placeholder="Your name"
                         required
                         className="bg-background/50"
                       />
@@ -95,7 +114,7 @@ export function ContactSection() {
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="john@example.com"
+                        placeholder="you@example.com"
                         required
                         className="bg-background/50"
                       />
@@ -107,7 +126,7 @@ export function ContactSection() {
                     <Input
                       id="subject"
                       name="subject"
-                      placeholder="How can I help you?"
+                      placeholder="What's this about?"
                       required
                       className="bg-background/50"
                     />

@@ -6,14 +6,14 @@ import { useRef } from "react"
 import Image from "next/image"
 
 const technologies = [
-  "Python",
-  "TypeScript",
+  "JavaScript / TypeScript",
   "React / Next.js",
-  "Node.js",
-  "TensorFlow / PyTorch",
-  "PostgreSQL",
-  "AWS / GCP",
-  "Docker",
+  "Node.js / Express",
+  "PostgreSQL / MongoDB",
+  "Prisma ORM / Supabase",
+  "Gemini / OpenAI APIs",
+  "Tailwind CSS",
+  "Git / GitHub",
 ]
 
 export function AboutSection() {
@@ -37,23 +37,24 @@ export function AboutSection() {
           <div className="grid md:grid-cols-3 gap-12">
             <div className="md:col-span-2 space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                Hello! {"I'm"} Ibrahim, a passionate Computer Science student with a deep 
-                fascination for artificial intelligence and its potential to transform 
-                the way we interact with technology. My journey in tech started when I 
-                built my first website at 14, and since then, {"I've"} been hooked on 
-                creating digital experiences.
+                I&apos;m a 4th-year B.Tech Computer Science student at{" "}
+                <span className="text-primary">Maharaja Agrasen Institute of Technology, Delhi</span>,
+                with a strong focus on AI engineering and full-stack development.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Currently, {"I'm"} pursuing my {"Bachelor's"} in Computer Science at 
-                <span className="text-primary"> Stanford University</span>, where I focus 
-                on machine learning and software engineering. {"I've"} had the privilege 
-                of working on projects ranging from AI-powered applications to 
-                full-stack web platforms.
+                I specialize in building production-ready applications that integrate large
+                language models, real-time data streaming, and modern web architectures. My
+                recent work includes a full-stack AI search engine with Server-Sent Events,
+                multi-level LLM fallback chains, and secure OAuth authentication — going
+                beyond tutorial-level projects into real engineering.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                When {"I'm"} not coding, you can find me exploring the latest in AI 
-                research, contributing to open-source projects, or mentoring fellow 
-                students in programming.
+                I hold an{" "}
+                <span className="text-primary">
+                  Oracle Cloud Infrastructure Generative AI Professional
+                </span>{" "}
+                certification, validating my expertise in prompt engineering, vector search,
+                embeddings, and enterprise AI deployment.
               </p>
 
               <div className="pt-4">
@@ -84,7 +85,7 @@ export function AboutSection() {
               <div className="relative">
                 <div className="relative rounded-lg overflow-hidden aspect-square">
                   <Image
-                    src="/images/profile.jpg"
+                    src="/Logo.png"
                     alt="Ibrahim Khan"
                     fill
                     className="object-cover rounded-lg"

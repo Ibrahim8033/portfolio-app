@@ -10,60 +10,51 @@ import {
   Wrench,
   Globe,
   Server,
-  Cpu,
-  GitBranch,
+  Shield,
+  Zap,
 } from "lucide-react"
 
 const skillCategories = [
   {
+    name: "Languages",
+    icon: Code2,
+    skills: ["JavaScript", "TypeScript", "C++", "Java", "HTML5", "CSS3"],
+  },
+  {
     name: "Frontend",
     icon: Globe,
-    skills: [
-      { name: "React / Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Tailwind CSS", level: 92 },
-      { name: "Vue.js", level: 75 },
-    ],
+    skills: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion", "React Native"],
   },
   {
     name: "Backend",
     icon: Server,
-    skills: [
-      { name: "Node.js", level: 88 },
-      { name: "Python", level: 92 },
-      { name: "Java", level: 80 },
-      { name: "Go", level: 65 },
-    ],
+    skills: ["Node.js", "Express.js", "Next.js API Routes", "REST APIs", "Server-Sent Events"],
   },
   {
-    name: "AI / ML",
+    name: "Database & ORM",
+    icon: Database,
+    skills: ["PostgreSQL", "MongoDB", "Prisma ORM", "Supabase"],
+  },
+  {
+    name: "AI & LLMs",
     icon: Brain,
-    skills: [
-      { name: "TensorFlow", level: 85 },
-      { name: "PyTorch", level: 82 },
-      { name: "NLP", level: 78 },
-      { name: "Computer Vision", level: 75 },
-    ],
+    skills: ["Gemini API", "OpenAI API", "Prompt Engineering", "RAG", "Vector Search", "Embeddings"],
   },
   {
-    name: "Tools & Others",
-    icon: Wrench,
-    skills: [
-      { name: "Git / GitHub", level: 95 },
-      { name: "Docker", level: 85 },
-      { name: "AWS / GCP", level: 80 },
-      { name: "CI/CD", level: 78 },
-    ],
+    name: "Auth & Security",
+    icon: Shield,
+    skills: ["Supabase Auth", "JWT", "Google OAuth", "GitHub OAuth", "API Middleware"],
   },
-]
-
-const techIcons = [
-  { name: "React", icon: Code2 },
-  { name: "Python", icon: Cpu },
-  { name: "Database", icon: Database },
-  { name: "Git", icon: GitBranch },
-  { name: "AI", icon: Brain },
-  { name: "Cloud", icon: Server },
+  {
+    name: "DevOps & Tools",
+    icon: Wrench,
+    skills: ["Git", "GitHub", "VS Code", "Vercel", "Postman"],
+  },
+  {
+    name: "Architecture",
+    icon: Zap,
+    skills: ["SSE Streaming", "LLM Fallback Chains", "CRUD Design", "Real-time Systems"],
+  },
 ]
 
 export function SkillsSection() {
@@ -84,33 +75,17 @@ export function SkillsSection() {
             <span className="h-px bg-border flex-1 max-w-xs" />
           </h2>
 
-          {/* Floating Tech Icons */}
-          <div className="flex flex-wrap justify-center gap-6 mb-16">
-            {techIcons.map((tech, index) => (
-              <motion.div
-                key={tech.name}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: index * 0.1, type: "spring" }}
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                className="glass p-4 rounded-xl"
-              >
-                <tech.icon className="h-8 w-8 text-primary" />
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Skill Categories */}
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* Skill Categories — Clean tag/chip layout, NO percentage bars */}
+          <div className="grid md:grid-cols-2 gap-6">
             {skillCategories.map((category, categoryIndex) => (
               <motion.div
                 key={category.name}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.2 + categoryIndex * 0.1 }}
+                transition={{ delay: 0.2 + categoryIndex * 0.08 }}
                 className="glass p-6 rounded-xl"
               >
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <category.icon className="h-5 w-5 text-primary" />
                   </div>
@@ -119,30 +94,20 @@ export function SkillsSection() {
                   </h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skill.name}>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm text-muted-foreground">
-                          {skill.name}
-                        </span>
-                        <span className="text-sm text-primary font-mono">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={isInView ? { width: `${skill.level}%` } : {}}
-                          transition={{
-                            delay: 0.5 + categoryIndex * 0.1 + skillIndex * 0.1,
-                            duration: 0.8,
-                            ease: "easeOut",
-                          }}
-                          className="h-full bg-gradient-to-r from-primary to-primary/70 rounded-full"
-                        />
-                      </div>
-                    </div>
+                    <motion.span
+                      key={skill}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                      transition={{
+                        delay: 0.4 + categoryIndex * 0.05 + skillIndex * 0.05,
+                        type: "spring",
+                      }}
+                      className="px-3 py-1.5 text-sm rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors cursor-default"
+                    >
+                      {skill}
+                    </motion.span>
                   ))}
                 </div>
               </motion.div>

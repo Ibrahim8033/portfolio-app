@@ -11,6 +11,7 @@ const navItems = [
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
+  { name: "Certifications", href: "#certifications" },
   { name: "Contact", href: "#contact" },
 ]
 
@@ -49,7 +50,7 @@ export function Navbar() {
             whileTap={{ scale: 0.95 }}
           >
             <span className="text-primary">{"<"}</span>
-            AC
+            IK
             <span className="text-primary">{" />"}</span>
           </motion.a>
 
@@ -88,6 +89,8 @@ export function Navbar() {
 
             <motion.a
               href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 border border-primary text-primary rounded-md text-sm hover:bg-primary/10 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -175,6 +178,8 @@ export function Navbar() {
                 ))}
                 <motion.a
                   href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-4 px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary/10 transition-colors"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
