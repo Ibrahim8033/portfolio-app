@@ -10,50 +10,38 @@ import {
   Wrench,
   Globe,
   Server,
-  Shield,
-  Zap,
 } from "lucide-react"
 
 const skillCategories = [
   {
     name: "Languages",
     icon: Code2,
-    skills: ["JavaScript", "TypeScript", "C++", "Java", "HTML5", "CSS3"],
+    skills: ["C++", "JavaScript", "TypeScript", "Java", "Python"],
   },
   {
-    name: "Frontend",
+    name: "Frontend Development",
     icon: Globe,
-    skills: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion", "React Native"],
+    skills: ["ReactJS", "Next.js", "Tailwind CSS", "HTML5", "CSS3", "JavaScript"],
   },
   {
-    name: "Backend",
+    name: "Backend & Architecture",
     icon: Server,
-    skills: ["Node.js", "Express.js", "Next.js API Routes", "REST APIs", "Server-Sent Events"],
+    skills: ["Node.js", "Express.js", "Next.js", "REST APIs", "JWT Authentication", "Server-Sent Events (SSE)"],
   },
   {
     name: "Database & ORM",
     icon: Database,
-    skills: ["PostgreSQL", "MongoDB", "Prisma ORM", "Supabase"],
+    skills: ["PostgreSQL", "MongoDB", "Supabase", "Prisma ORM"],
   },
   {
-    name: "AI & LLMs",
+    name: "AI & Generative AI",
     icon: Brain,
-    skills: ["Gemini API", "OpenAI API", "Prompt Engineering", "RAG", "Vector Search", "Embeddings"],
+    skills: ["Gemini API", "LLM Reasoning", "Prompt Engineering", "Vector Search", "Embeddings", "OCI AI Services"],
   },
   {
-    name: "Auth & Security",
-    icon: Shield,
-    skills: ["Supabase Auth", "JWT", "Google OAuth", "GitHub OAuth", "API Middleware"],
-  },
-  {
-    name: "DevOps & Tools",
+    name: "Tools & Auth",
     icon: Wrench,
-    skills: ["Git", "GitHub", "VS Code", "Vercel", "Postman"],
-  },
-  {
-    name: "Architecture",
-    icon: Zap,
-    skills: ["SSE Streaming", "LLM Fallback Chains", "CRUD Design", "Real-time Systems"],
+    skills: ["Git", "GitHub", "VS Code", "Supabase Auth", "Google/GitHub OAuth", "API Middleware"],
   },
 ]
 

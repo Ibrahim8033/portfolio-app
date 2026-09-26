@@ -12,7 +12,7 @@ import { ParticleBackground } from "@/components/particle-background"
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen overflow-x-hidden w-full">
       <ParticleBackground />
       <ScrollProgress />
       <Navbar />

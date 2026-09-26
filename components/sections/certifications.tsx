@@ -7,14 +7,14 @@ import { Award, ExternalLink } from "lucide-react"
 
 const certifications = [
   {
-    title: "OCI 2025 Certified Generative AI Professional",
+    title: "Oracle Cloud Infrastructure (OCI) 2025 Certified Generative AI Professional",
     issuer: "Oracle",
     date: "2025",
     highlights: [
-      "Generative AI model lifecycle, deployment on OCI, and Oracle AI services in real-world architectures",
-      "Prompt engineering, embeddings, vector search, and building secure, scalable AI solutions",
+      "Gained in-depth understanding of Generative AI model lifecycle, deployment on OCI, and Oracle AI services in real-world architectures",
+      "Hands-on knowledge of prompt engineering, embeddings, vector search, and building secure, scalable AI solutions",
     ],
-    link: "#",
+    link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=0E159E1438557DD9F36D4550B86C215FE318F4F003EF083E1C2D6E356AA4AE1E",
     badge: "🏅",
   },
   {
@@ -22,10 +22,10 @@ const certifications = [
     issuer: "GeeksforGeeks",
     date: "2025",
     highlights: [
-      "Prompt engineering and AI content generation techniques",
-      "Working with AI tools to generate structured outputs and improve responses",
+      "Developed understanding of prompt engineering and AI content generation",
+      "Worked with AI tools to generate structured outputs and improve responses",
     ],
-    link: "#",
+    link: "",
     badge: "📜",
   },
 ]
@@ -74,7 +74,19 @@ export function CertificationsSection() {
                         </div>
                       </div>
                     </div>
-                    <Award className="h-6 w-6 text-primary/50 shrink-0" />
+                    <div className="flex items-center gap-2 shrink-0">
+                      {cert.link && (
+                        <a
+                          href={cert.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-xs font-mono text-primary hover:underline bg-primary/10 px-2.5 py-1 rounded-md transition-colors hover:bg-primary/20"
+                        >
+                          Verify <ExternalLink className="h-3 w-3 ml-0.5" />
+                        </a>
+                      )}
+                      <Award className="h-6 w-6 text-primary/50 shrink-0" />
+                    </div>
                   </div>
 
                   <ul className="space-y-1.5 mt-4">

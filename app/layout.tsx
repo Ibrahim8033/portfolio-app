@@ -1,37 +1,24 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Fira_Code } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const firaCode = Fira_Code({
-  subsets: ["latin"],
-  variable: '--font-fira-code',
-  display: 'swap',
-});
-
 export const metadata: Metadata = {
-  title: 'Ibrahim Khan | Full-Stack Developer & AI Engineer',
-  description: 'Portfolio of MD Ibrahim Khan — Full-Stack Developer & AI Engineer. B.Tech CST at MAIT Delhi. Building production-grade AI-powered applications with real-time streaming, LLM integrations, and scalable architectures. Oracle Certified Generative AI Professional.',
-  keywords: ['Ibrahim Khan', 'full-stack developer', 'AI engineer', 'portfolio', 'Next.js', 'React', 'LLM', 'generative AI', 'web development', 'MAIT Delhi', 'software engineer'],
+  title: 'MD Ibrahim Khan | Full-Stack Developer & Software Engineer',
+  description: 'Portfolio of MD Ibrahim Khan — 4th-year B.Tech CST student at MAIT Delhi. Full-Stack Developer with hands-on experience in React, Next.js, Node.js, TypeScript, PostgreSQL, and AI-powered applications. Oracle Certified Generative AI Professional.',
+  keywords: ['MD Ibrahim Khan', 'Ibrahim Khan', 'Full-Stack Developer', 'Software Engineer', 'AI Engineer', 'Next.js', 'React', 'Node.js', 'PostgreSQL', 'MAIT Delhi', 'Oracle Certified Generative AI Professional'],
   authors: [{ name: 'MD Ibrahim Khan' }],
   creator: 'MD Ibrahim Khan',
   openGraph: {
-    title: 'Ibrahim Khan | Full-Stack Developer & AI Engineer',
-    description: 'Building production-grade AI-powered applications with real-time streaming, LLM integrations, and scalable architectures.',
+    title: 'MD Ibrahim Khan | Full-Stack Developer & Software Engineer',
+    description: 'Portfolio of MD Ibrahim Khan — 4th-year B.Tech CST student at MAIT Delhi. Full-Stack Developer experienced in React, Next.js, Node.js, TypeScript, PostgreSQL, and AI-powered applications.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ibrahim Khan | Full-Stack Developer & AI Engineer',
-    description: 'Building production-grade AI-powered applications with real-time streaming, LLM integrations, and scalable architectures.',
+    title: 'MD Ibrahim Khan | Full-Stack Developer & Software Engineer',
+    description: 'Portfolio of MD Ibrahim Khan — 4th-year B.Tech CST student at MAIT Delhi. Full-Stack Developer experienced in React, Next.js, Node.js, TypeScript, PostgreSQL, and AI-powered applications.',
   },
   robots: {
     index: true,
@@ -72,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${firaCode.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body className="font-sans antialiased overflow-x-hidden min-h-screen" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

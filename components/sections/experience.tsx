@@ -10,14 +10,14 @@ const experiences = [
     type: "work",
     title: "Software Development Intern",
     company: "Zidio Development",
-    companyUrl: "#",
-    location: "Remote",
+    companyUrl: "https://zidio.in",
+    location: "Remote / New Delhi, India",
     date: "Apr 2025 – Jul 2025",
     description: [
-      "Engineered and shipped full-stack web features using React, Node.js, and REST APIs, contributing to production deployments serving active users",
-      "Collaborated with a cross-functional team of 5+ developers on feature design, code reviews, and iterative testing cycles",
-      "Conducted technical research on API integration patterns and proposed architecture improvements adopted by the team",
-      "Maintained strict data security protocols handling sensitive client information across development and staging environments",
+      "Assisted in the development and implementation of web-based solutions.",
+      "Collaborated with team members on the design, coding, and testing of new features.",
+      "Conducted research and analysis to support ongoing projects.",
+      "Adhered to confidentiality protocols for client and company data.",
     ],
   },
 ]
@@ -25,15 +25,15 @@ const experiences = [
 const education = [
   {
     type: "education",
-    title: "B.Tech in Computer Science & Technology",
+    title: "B.Tech - Computer Science & Technology",
     company: "Maharaja Agrasen Institute of Technology, Delhi",
     companyUrl: "https://mait.ac.in",
-    location: "New Delhi, India",
+    location: "Delhi, India",
     date: "2024 – 2027",
     description: [
-      "CGPA: 7.94 — Focused on AI/ML, Data Structures, and Software Engineering",
-      "Building full-stack AI-powered applications as personal projects alongside coursework",
-      "Active in technical communities and open-source contributions",
+      "CGPA: 8.14",
+      "Focused on software engineering, backend systems, database management, and AI integration",
+      "Actively developing end-to-end full-stack and AI-powered applications",
     ],
   },
   {
@@ -44,9 +44,8 @@ const education = [
     location: "New Delhi, India",
     date: "2021 – 2024",
     description: [
-      "Percentage: 77.025% — Strong foundation in engineering fundamentals",
-      "Developed early programming skills in C, C++, and web technologies",
-      "Participated in technical events and coding workshops",
+      "Percentage: 77.025%",
+      "Solid foundational engineering education covering programming fundamentals, C++, Java, and web technologies",
     ],
   },
 ]
@@ -101,7 +100,7 @@ export function ExperienceSection() {
           {/* Timeline */}
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
+            <div className="absolute left-2 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
 
             {filteredItems.map((item, index) => (
               <motion.div
@@ -114,7 +113,7 @@ export function ExperienceSection() {
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 border-4 border-background z-10" />
+                <div className="absolute left-2 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 border-4 border-background z-10" />
 
                 {/* Content */}
                 <div

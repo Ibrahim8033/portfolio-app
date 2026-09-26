@@ -2,69 +2,42 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
-import { useRef, useState } from "react"
-import { ExternalLink, Github, Folder } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useRef } from "react"
+import { ExternalLink, Github } from "lucide-react"
 
 const featuredProjects = [
   {
-    title: "SearchAI — AI-Powered Search Engine",
+    title: "Perplexity AI Clone — AI-Powered Search Engine",
     description:
-      "A production-grade, full-stack AI search engine inspired by Perplexity AI. Delivers real-time, cited answers by combining web search with LLM reasoning. Features streaming responses with inline source citations, persistent conversation history, and multi-provider authentication.",
+      "A full-stack AI-powered search engine inspired by Perplexity AI that delivers real-time, cited answers by combining web search with LLM reasoning. The app streams AI-generated responses with inline source citations, conversation history management, and user authentication.",
     highlights: [
-      "Real-time streaming via Server-Sent Events with 3-tier LLM fallback (Gemini → Vercel AI Gateway → Web Synthesis)",
-      "Persistent conversation history with full CRUD backed by PostgreSQL + Prisma ORM",
-      "Secure OAuth (Google/GitHub) via Supabase with JWT-secured API middleware",
-      "Optimized system prompts for production-quality AI responses across query types",
+      "Real-time streaming responses using Server-Sent Events with multi-level LLM fallback (Gemini → Vercel AI Gateway → Web Synthesis)",
+      "Persistent conversation history with full CRUD operations backed by PostgreSQL via Prisma ORM",
+      "Secure authentication using Supabase (Google/GitHub OAuth) with JWT-based API middleware",
+      "Inline source citations combined with web search integration for factual, verifiable AI responses",
     ],
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Supabase", "Gemini API", "SSE", "Tailwind CSS"],
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma ORM", "Supabase", "Gemini API", "SSE", "Tailwind CSS", "REST API", "JWT"],
     github: "https://github.com/Ibrahim8033",
-    live: "#",
+    live: "https://perplexity-ai-oauv.vercel.app/",
   },
   {
-    title: "TARS — AI-Powered Website Builder",
+    title: "Developer Portfolio Platform",
     description:
-      "An AI-powered web application builder that generates complete, functional websites from natural language prompts. Users describe what they want, and TARS generates full HTML/CSS/JS with a live in-browser preview.",
+      "Modern, performant developer portfolio engineered with Next.js, TypeScript, Tailwind CSS, and Framer Motion. Built to present real-world projects, architecture decisions, certifications, and technical background with dark/light theme support and responsive design.",
     highlights: [
-      "AI-driven code generation using Gemini API with structured output parsing",
-      "Live in-browser preview using WebContainer API for real-time code execution",
-      "Iterative refinement — users can modify generated sites through follow-up prompts",
-      "Full project generation (HTML, CSS, JS) from a single natural language description",
+      "Engineered with Next.js App Router and TypeScript for optimal web performance and type safety",
+      "Interactive UI with smooth Framer Motion animations and particle background",
+      "Clean, recruiter-friendly design showcasing verified technical experience and verifiable certifications",
     ],
-    tech: ["React", "TypeScript", "Gemini API", "WebContainer API", "Node.js", "Tailwind CSS"],
-    github: "https://github.com/Ibrahim8033",
-    live: "#",
-  },
-]
-
-const otherProjects = [
-  {
-    title: "Developer Portfolio",
-    description: "This website — a modern, performant developer portfolio built with Next.js 16 featuring glassmorphism design, smooth animations, dark/light mode, and SEO optimization.",
-    tech: ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Framer Motion", "Vercel"],
-    github: "https://github.com/Ibrahim8033",
-    live: "#",
-  },
-  {
-    title: "Event Management Platform",
-    description: "A full-stack event management platform with user authentication, event creation, and real-time updates. Supports free and premium tiers with role-based access control.",
-    tech: ["React", "Convex", "Clerk Auth", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/Ibrahim8033",
-  },
-  {
-    title: "Real-time Chat System",
-    description: "End-to-end chat application with real-time messaging, conversation management, and persistent message history backed by a relational database.",
-    tech: ["Next.js", "Socket.io", "PostgreSQL", "Prisma", "TypeScript"],
-    github: "https://github.com/Ibrahim8033",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/Ibrahim8033/portfolio-app",
+    live: "https://ibrahimkhan.in/",
   },
 ]
 
 export function ProjectsSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [showAll, setShowAll] = useState(false)
-
-  const displayedProjects = showAll ? otherProjects : otherProjects.slice(0, 3)
 
   return (
     <section id="projects" className="py-24 px-6" ref={ref}>
@@ -76,12 +49,12 @@ export function ProjectsSection() {
         >
           <h2 className="flex items-center gap-4 text-2xl md:text-3xl font-bold text-foreground mb-10">
             <span className="text-primary font-mono text-lg md:text-xl">02.</span>
-            Things I&apos;ve Built
+            Featured Projects
             <span className="h-px bg-border flex-1 max-w-xs" />
           </h2>
 
           {/* Featured Projects */}
-          <div className="space-y-20 mb-24">
+          <div className="space-y-12">
             {featuredProjects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -94,7 +67,7 @@ export function ProjectsSection() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary/70 to-transparent" />
                 
                 <div className="flex items-center justify-between mb-4">
-                  <p className="text-primary font-mono text-sm">Featured Project</p>
+                  <p className="text-primary font-mono text-sm">Featured Engineering Project</p>
                   <div className="flex gap-4">
                     <a
                       href={project.github}
@@ -129,7 +102,7 @@ export function ProjectsSection() {
 
                 {/* Engineering highlights */}
                 <div className="mb-6">
-                  <p className="text-sm font-medium text-foreground mb-3">Key Engineering Decisions:</p>
+                  <p className="text-sm font-medium text-foreground mb-3">Key Technical Highlights:</p>
                   <ul className="space-y-2">
                     {project.highlights.map((highlight, i) => (
                       <motion.li
@@ -159,79 +132,6 @@ export function ProjectsSection() {
               </motion.div>
             ))}
           </div>
-
-          {/* Other Projects */}
-          <h3 className="text-center text-xl font-bold text-foreground mb-8">
-            Other Noteworthy Projects
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {displayedProjects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.5 + index * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="glass p-6 rounded-lg flex flex-col h-full group"
-              >
-                <div className="flex justify-between items-start mb-6">
-                  <Folder className="h-10 w-10 text-primary" />
-                  <div className="flex gap-4">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                        aria-label="View GitHub repository"
-                      >
-                        <Github className="h-5 w-5" />
-                      </a>
-                    )}
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                        aria-label="View live demo"
-                      >
-                        <ExternalLink className="h-5 w-5" />
-                      </a>
-                    )}
-                  </div>
-                </div>
-                <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h4>
-                <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-4">
-                  {project.description}
-                </p>
-                <ul className="flex flex-wrap gap-2 text-xs font-mono">
-                  {project.tech.map((t) => (
-                    <li
-                      key={t}
-                      className="px-2 py-0.5 rounded-full bg-primary/10 text-primary/80"
-                    >
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-
-          {otherProjects.length > 3 && (
-            <div className="text-center mt-8">
-              <Button
-                variant="outline"
-                onClick={() => setShowAll(!showAll)}
-                className="border-primary text-primary hover:bg-primary/10"
-              >
-                {showAll ? "Show Less" : "Show More"}
-              </Button>
-            </div>
-          )}
         </motion.div>
       </div>
     </section>
