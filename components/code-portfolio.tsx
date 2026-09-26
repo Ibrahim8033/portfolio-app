@@ -20,7 +20,7 @@ export function CodePortfolio() {
               <span className="text-[#555]">&lt;img&gt;</span>
               <div className="mt-1 border border-[#2a2a2e] rounded overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.03)] w-full max-w-[250px]">
                 <Image
-                  src="/Logo.png"
+                  src="/profile-photo.png"
                   alt="Ibrahim Khan"
                   width={200}
                   height={200}

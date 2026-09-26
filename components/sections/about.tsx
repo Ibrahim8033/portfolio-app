@@ -98,7 +98,7 @@ export function AboutSection() {
                 {/* Profile Image Container */}
                 <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border/80 bg-card shadow-xl transition-all duration-300 group-hover:border-primary/40">
                   <Image
-                    src="/Logo.png"
+                    src="/profile-photo.png"
                     alt="MD Ibrahim Khan"
                     fill
                     className="object-cover object-top rounded-2xl transition-transform duration-500 group-hover:scale-[1.03]"
